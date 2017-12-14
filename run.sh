@@ -1,3 +1,4 @@
 #!/bin/sh
-swift build
-.build/debug/Leviticus serve
+rm .build/debug/Run
+swift build --configuration=debug -Xswiftc -DDEBUG
+.build/debug/Run serve
